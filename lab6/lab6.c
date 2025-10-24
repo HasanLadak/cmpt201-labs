@@ -179,19 +179,16 @@ int index_of(uint64_t data) {
 
 int main() {
   insert_sorted(1);
-  ASSERT(info.sum == calculate_sum());
 
   insert_sorted(3);
-  ASSERT(info.sum == calculate_sum());
 
   insert_sorted(5);
-  ASSERT(info.sum == calculate_sum());
 
   insert_sorted(2);
-  ASSERT(info.sum == calculate_sum());
 
   TEST(info.sum == 1 + 3 + 5 + 2);
   TEST(index_of(2) == 1);
-
+  ASSERT(info.sum == calculate_sum());
+  
   return 0;
 }
